@@ -465,6 +465,8 @@ body.el .el.block {
     }
 
     #mobile-menu-toggle {
+	position: fixed;
+	right: 90px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
