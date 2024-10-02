@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>smartKofini - Your Smart Produce Shopping Companion | Ο Έξυπνος Σύντροφος Αγορών σας</title>
@@ -10,262 +10,297 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-</head>
-<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+  </head>
+  <body>
     <div id="loading-overlay">
-        <div class="spinner"></div>
+      <div class="spinner"></div>
     </div>
 
-<header>
-    <nav>
+    <header>
+      <nav>
         <img src="smartKofini-logo.png" alt="smartKofini logo" class="logo">
         <div class="nav-items">
-            <ul>
-                <li><a href="#home" class="en">Home</a><a href="#home" class="el">Αρχική</a></li>
-                <li><a href="#features" class="en">Features</a><a href="#features" class="el">Χαρακτηριστικά</a></li>
-                <li><a href="#about" class="en">About</a><a href="#about" class="el">Σχετικά</a></li>
-                <li><a href="#contact" class="en">Contact</a><a href="#contact" class="el">Επικοινωνία</a></li>
-            </ul>
-            <div class="nav-controls">
-                <div class="lang-switch">
-                    <button onclick="switchLanguage('en')">EN</button>
-                    <button onclick="switchLanguage('el')">EL</button>
-                </div>
-                <button id="dark-mode-toggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
+          <ul>
+            <li><a href="#home" class="en">Home</a><a href="#home" class="el">Αρχική</a></li>
+            <li><a href="#features" class="en">Features</a><a href="#features" class="el">Χαρακτηριστικά</a></li>
+            <li><a href="#about" class="en">About</a><a href="#about" class="el">Σχετικά</a></li>
+            <li><a href="#contact" class="en">Contact</a><a href="#contact" class="el">Επικοινωνία</a></li>
+          </ul>
+          <div class="nav-controls">
+            <div class="lang-switch">
+              <button onclick="switchLanguage('en')">EN</button>
+              <button onclick="switchLanguage('el')">EL</button>
             </div>
+            <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
         </div>
         <button id="mobile-menu-toggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-    </nav>
-</header>
+      </nav>
+    </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content" data-aos="fade-right">
-                <h1 class="welcome-text">
-                    <span class="en">Welcome to <span class="highlight">smartKofini</span></span>
-                    <span class="el">Καλώς ήρθατε στο <span class="highlight">smartKofini</span></span>
-                </h1>
-                <p class="en">Your smart shopping companion for fresh Cyprus produce</p>
-                <p class="el">Ο έξυπνος σύντροφος αγορών σας για φρέσκα κυπριακά προϊόντα</p>
-                <a href="https://play.google.com/store/apps/details?id=com.ekofini.app" target="_blank" rel="noopener noreferrer">
-                    <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" class="google-play-badge">
-                </a>
-            </div>
-            <div class="hero-image" data-aos="fade-left">
-              <img src="smartKofini-home-1.png" alt="smartKofini app showcase"  style="max-width: 100%; max-height: 400px;">
-            </div>
-        </section>
-
-        <section id="features">
-            <div class="section-header" data-aos="fade-up">
-                <h2>
-                    <span class="en">Powerful <span class="highlight">Features</span></span>
-                    <span class="el">Ισχυρά <span class="highlight">Χαρακτηριστικά</span></span>
-                </h2>
-                <div class="underline"></div>
-            </div>
-            <div class="feature-grid">
-                <div class="feature" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-balance-scale feature-icon"></i>
-                    <h3 class="en">Smart Price Comparison</h3>
-                    <h3 class="el">Έξυπνη Σύγκριση Τιμών</h3>
-                    <p class="en">Compare retail and producer prices for a wide variety of fruits and vegetables in real-time. Make informed decisions and maximize your savings on every shopping trip.</p>
-                    <p class="el">Συγκρίνετε τις τιμές λιανικής και παραγωγού για μια μεγάλη ποικιλία φρούτων και λαχανικών σε πραγματικό χρόνο. Πάρτε ενημερωμένες αποφάσεις και μεγιστοποιήστε την εξοικονόμησή σας σε κάθε αγορά.</p>
-                </div>
-                <div class="feature" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-robot feature-icon"></i>
-                    <h3 class="en">AI-Powered Recommendations</h3>
-                    <h3 class="el">Προτάσεις με Τεχνητή Νοημοσύνη</h3>
-                    <p class="en">Receive intelligent shopping suggestions based on current market trends, seasonal availability, and your personal preferences. Our AI helps you identify the best deals and optimal times to purchase.</p>
-                    <p class="el">Λάβετε έξυπνες προτάσεις αγορών βασισμένες στις τρέχουσες τάσεις της αγοράς, την εποχική διαθεσιμότητα και τις προσωπικές σας προτιμήσεις. Η τεχνητή νοημοσύνη μας σας βοηθά να εντοπίσετε τις καλύτερες προσφορές και τους βέλτιστους χρόνους αγοράς.</p>
-                </div>
-                <div class="feature" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-chart-line feature-icon"></i>
-                    <h3 class="en">Historical Data & Trends</h3>
-                    <h3 class="el">Ιστορικά Δεδομένα & Τάσεις</h3>
-                    <p class="en">Explore interactive charts showcasing price trends over time. Gain insights into seasonal patterns and make predictions about future price movements to plan your shopping strategically.</p>
-                    <p class="el">Εξερευνήστε διαδραστικά γραφήματα που παρουσιάζουν τις τάσεις των τιμών με την πάροδο του χρόνου. Αποκτήστε γνώσεις για τα εποχιακά πρότυπα και κάντε προβλέψεις για τις μελλοντικές κινήσεις των τιμών για να σχεδιάσετε στρατηγικά τις αγορές σας.</p>
-                </div>
-                <div class="feature" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-shopping-basket feature-icon"></i>
-                    <h3 class="en">Multiple Shopping Carts</h3>
-                    <h3 class="el">Πολλαπλά Καλάθια Αγορών</h3>
-                    <p class="en">Create and manage various shopping lists for different needs, occasions, or family members. Keep your shopping organized and track potential savings across all your planned purchases.</p>
-                    <p class="el">Δημιουργήστε και διαχειριστείτε διάφορες λίστες αγορών για διαφορετικές ανάγκες, περιστάσεις ή μέλη της οικογένειας. Διατηρήστε τις αγορές σας οργανωμένες και παρακολουθήστε τις πιθανές εξοικονομήσεις σε όλες τις προγραμματισμένες αγορές σας.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="section-header" data-aos="fade-up">
-                <h2>
-                    <span class="en">About <span class="highlight">smartKofini</span></span>
-                    <span class="el">Σχετικά με το <span class="highlight">smartKofini</span></span>
-                </h2>
-                <div class="underline"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text" data-aos="fade-right">
-                    <p class="en">smartKofini, meaning "weaved basket" in Greek, is your digital shopping companion for Cyprus produce. We've woven together cutting-edge technology with traditional shopping wisdom to create an app that revolutionizes how you buy fruits and vegetables.</p>
-                    <p class="el">Το smartKofini, που σημαίνει "πλεκτό καλάθι" στα ελληνικά, είναι ο ψηφιακός σας σύντροφος για τις αγορές κυπριακών προϊόντων. Έχουμε συνδυάσει την τελευταία λέξη της τεχνολογίας με την παραδοσιακή σοφία των αγορών για να δημιουργήσουμε μια εφαρμογή που φέρνει επανάσταση στον τρόπο που αγοράζετε φρούτα και λαχανικά.</p>
-                    <p class="en">Powered by official data from the Cyprus Ministry of Agriculture, smartKofini provides you with accurate, up-to-date information to make every purchase a smart one. Whether you're a budget-conscious shopper, a cooking enthusiast, or simply someone who appreciates the value of fresh, local produce, smartKofini is your trusted partner in navigating the dynamic world of Cyprus's fruit and vegetable markets.</p>
-                    <p class="el">Τροφοδοτούμενο από επίσημα δεδομένα του Υπουργείου Γεωργίας της Κύπρου, το smartKofini σας παρέχει ακριβείς, ενημερωμένες πληροφορίες για να κάνετε κάθε αγορά έξυπνη. Είτε είστε αγοραστής που προσέχει τον προϋπολογισμό του, λάτρης της μαγειρικής, είτε απλά κάποιος που εκτιμά την αξία των φρέσκων, τοπικών προϊόντων, το smartKofini είναι ο αξιόπιστος συνεργάτης σας στην πλοήγηση στον δυναμικό κόσμο των αγορών φρούτων και λαχανικών της Κύπρου.</p>
-                </div>
-                <div class="about-image" data-aos="fade-left">
-                    <img src="about-image.png" alt="Fresh produce in a traditional Cypriot basket">
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials">
-            <div class="section-header" data-aos="fade-up">
-                <h2>
-                    <span class="en">What Our Users Say</span>
-                    <span class="el">Τι Λένε οι Χρήστες μας</span>
-                </h2>
-                <div class="underline"></div>
-            </div>
-            <div class="testimonial-slider" data-aos="fade-up">
-                <div class="testimonial">
-                    <p class="en">"smartKofini has revolutionized the way I shop for produce. I save both time and money!"</p>
-                    <p class="el">"Το smartKofini έχει φέρει επανάσταση στον τρόπο που ψωνίζω προϊόντα. Εξοικονομώ χρόνο και χρήματα!"</p>
-                    <p class="author">- Savvas C.</p>
-                </div>
-                <!-- <div class="testimonial"> -->
-                <!--     <p class="en">"smartKofini helps me shop fruits and vegetables at the best quality and price!"</p> -->
-                <!--     <p class="el">"Το smartKofini με βοηθάει να ψωνίζω φρούτα και λαχανικά στην καλύτερη ποιότητα και τιμή!"</p> -->
-                <!--     <p class="author">- Christiana P.</p> -->
-                <!-- </div> -->
-                <!-- Add more testimonials as needed -->
-            </div>
-        </section>
-
-        <section id="contact">
-	  <script type="text/javascript">
-	    var submitted=false;
-		    function disableSubmit() {
-			var submitButton = document.getElementById('submitButton');
-			submitButton.disabled = true;
-			submitButton.innerText = '...';
-			submitted = true;
-		    }
-	  </script>
-
-	  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"  onload="if(submitted) {document.getElementById('contact').style.display='none';  document.getElementById('thankYouMessage').style.display='block';}"></iframe>
-
-            <div class="section-header" data-aos="fade-up">
-                <h2>
-                    <span class="en">Get in <span class="highlight">Touch</span></span>
-                    <span class="el">Επικοινωνήστε <span class="highlight">Μαζί μας</span></span>
-                </h2>
-                <div class="underline"></div>
-            </div>
-	    <form data-aos="fade-up" class="contact-form" id="contactForm"
-		  action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd8_fzCuPd0F9gn4bk-DIPrkmcd4aQjJIFRq0zTweqGvyePSQ/formResponse" method="POST" target="hidden_iframe"  onsubmit="disableSubmit()">
-              <input type="text" id="name" placeholder="Name / Όνομα" name="entry.1546443415"  pattern="[a-zA-Z\u0370-\u03FF\u1F00-\u1FFF ]+" oninvalid="this.setCustomValidity('Enter a name containing only letters')"  onchange="try{setCustomValidity('')}catch(e){}"  oninput="setCustomValidity(' ')"  required>
-              <input type="email" id="email" placeholder="Email / Ηλ. Ταχυδρομείο" name="entry.134040132" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"  oninvalid="this.setCustomValidity('Enter a valid email address')"  onchange="try{setCustomValidity('')}catch(e){}"  oninput="setCustomValidity(' ')" required>
-              <textarea id="message" placeholder="Message / Μήνυμα" name="entry.188106255" required></textarea>
-              <button type="submit" id="submitButton">
-                <span class="en">Send</span>
-                <span class="el">Αποστολή</span>
-                <i class="fas fa-paper-plane"></i>
-              </button>
-            </form>		
-        </section>
-	<div class="container" id="thankYouMessage">
-	  <h3>Thank you!</h3>
-	  <p>Your message has been sent.</p>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1 class="welcome-text">
+            <span class="en">Welcome to <span class="highlight">smartKofini</span></span>
+            <span class="el">Καλώς ήρθατε στο <span class="highlight">smartKofini</span></span>
+          </h1>
+          <p class="en">Your smart shopping companion for fresh Cyprus produce</p>
+          <p class="el">Ο έξυπνος σύντροφος αγορών σας για φρέσκα κυπριακά προϊόντα</p>
+          <a href="https://play.google.com/store/apps/details?id=com.ekofini.app" target="_blank" rel="noopener noreferrer">
+            <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" class="google-play-badge">
+          </a>
+        </div>
+	<div class="hero-image" data-aos="fade-right">
+	  <div class="carousel">
+	    <div><img src="smartKofini-home-1.png" alt="smartKofini app showcase 1"></div>
+	    <div><img src="smartKofini-home-2.png" alt="smartKofini app showcase 2"></div>
+	    <div><img src="smartKofini-home-3.png" alt="smartKofini app showcase 3"></div>
+	    <div><img src="smartKofini-cart-2.png" alt="smartKofini app showcase 4"></div>
+	    <div><img src="smartKofini-search.png" alt="smartKofini app showcase 5"></div>
+	  </div>
 	</div>
+      </section>
+
+      <section id="features">
+        <div class="section-header" data-aos="fade-up">
+          <h2>
+            <span class="en">Powerful <span class="highlight">Features</span></span>
+            <span class="el">Ισχυρά <span class="highlight">Χαρακτηριστικά</span></span>
+          </h2>
+          <div class="underline"></div>
+        </div>
+        <div class="feature-grid">
+          <div class="feature" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-balance-scale feature-icon"></i>
+            <h3 class="en">Smart Price Comparison</h3>
+            <h3 class="el">Έξυπνη Σύγκριση Τιμών</h3>
+            <p class="en">Compare retail and producer prices for a wide variety of fruits and vegetables in real-time. Make informed decisions and maximize your savings on every shopping trip.</p>
+            <p class="el">Συγκρίνετε τις τιμές λιανικής και παραγωγού για μια μεγάλη ποικιλία φρούτων και λαχανικών σε πραγματικό χρόνο. Πάρτε ενημερωμένες αποφάσεις και μεγιστοποιήστε την εξοικονόμησή σας σε κάθε αγορά.</p>
+          </div>
+          <div class="feature" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-robot feature-icon"></i>
+            <h3 class="en">AI-Powered Recommendations</h3>
+            <h3 class="el">Προτάσεις με Τεχνητή Νοημοσύνη</h3>
+            <p class="en">Receive intelligent shopping suggestions based on current market trends, seasonal availability, and your personal preferences. Our AI helps you identify the best deals and optimal times to purchase.</p>
+            <p class="el">Λάβετε έξυπνες προτάσεις αγορών βασισμένες στις τρέχουσες τάσεις της αγοράς, την εποχική διαθεσιμότητα και τις προσωπικές σας προτιμήσεις. Η τεχνητή νοημοσύνη μας σας βοηθά να εντοπίσετε τις καλύτερες προσφορές και τους βέλτιστους χρόνους αγοράς.</p>
+          </div>
+          <div class="feature" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-chart-line feature-icon"></i>
+            <h3 class="en">Historical Data & Trends</h3>
+            <h3 class="el">Ιστορικά Δεδομένα & Τάσεις</h3>
+            <p class="en">Explore interactive charts showcasing price trends over time. Gain insights into seasonal patterns and make predictions about future price movements to plan your shopping strategically.</p>
+            <p class="el">Εξερευνήστε διαδραστικά γραφήματα που παρουσιάζουν τις τάσεις των τιμών με την πάροδο του χρόνου. Αποκτήστε γνώσεις για τα εποχιακά πρότυπα και κάντε προβλέψεις για τις μελλοντικές κινήσεις των τιμών για να σχεδιάσετε στρατηγικά τις αγορές σας.</p>
+          </div>
+          <div class="feature" data-aos="fade-up" data-aos-delay="400">
+            <i class="fas fa-shopping-basket feature-icon"></i>
+            <h3 class="en">Multiple Shopping Carts</h3>
+            <h3 class="el">Πολλαπλά Καλάθια Αγορών</h3>
+            <p class="en">Create and manage various shopping lists for different needs, occasions, or family members. Keep your shopping organized and track potential savings across all your planned purchases.</p>
+            <p class="el">Δημιουργήστε και διαχειριστείτε διάφορες λίστες αγορών για διαφορετικές ανάγκες, περιστάσεις ή μέλη της οικογένειας. Διατηρήστε τις αγορές σας οργανωμένες και παρακολουθήστε τις πιθανές εξοικονομήσεις σε όλες τις προγραμματισμένες αγορές σας.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="section-header" data-aos="fade-up">
+          <h2>
+            <span class="en">About <span class="highlight">smartKofini</span></span>
+            <span class="el">Σχετικά με το <span class="highlight">smartKofini</span></span>
+          </h2>
+          <div class="underline"></div>
+        </div>
+        <div class="about-content">
+          <div class="about-text" data-aos="fade-right">
+            <p class="en">smartKofini, meaning "weaved basket" in Greek, is your digital shopping companion for Cyprus produce. We've woven together cutting-edge technology with traditional shopping wisdom to create an app that revolutionizes how you buy fruits and vegetables.</p>
+            <p class="el">Το smartKofini, που σημαίνει "πλεκτό καλάθι" στα ελληνικά, είναι ο ψηφιακός σας σύντροφος για τις αγορές κυπριακών προϊόντων. Έχουμε συνδυάσει την τελευταία λέξη της τεχνολογίας με την παραδοσιακή σοφία των αγορών για να δημιουργήσουμε μια εφαρμογή που φέρνει επανάσταση στον τρόπο που αγοράζετε φρούτα και λαχανικά.</p>
+            <p class="en">Powered by official data from the Cyprus Ministry of Agriculture, smartKofini provides you with accurate, up-to-date information to make every purchase a smart one. Whether you're a budget-conscious shopper, a cooking enthusiast, or simply someone who appreciates the value of fresh, local produce, smartKofini is your trusted partner in navigating the dynamic world of Cyprus's fruit and vegetable markets.</p>
+            <p class="el">Τροφοδοτούμενο από επίσημα δεδομένα του Υπουργείου Γεωργίας της Κύπρου, το smartKofini σας παρέχει ακριβείς, ενημερωμένες πληροφορίες για να κάνετε κάθε αγορά έξυπνη. Είτε είστε αγοραστής που προσέχει τον προϋπολογισμό του, λάτρης της μαγειρικής, είτε απλά κάποιος που εκτιμά την αξία των φρέσκων, τοπικών προϊόντων, το smartKofini είναι ο αξιόπιστος συνεργάτης σας στην πλοήγηση στον δυναμικό κόσμο των αγορών φρούτων και λαχανικών της Κύπρου.</p>
+          </div>
+          <div class="about-image" data-aos="fade-left">
+            <img src="about-image.png" alt="Fresh produce in a traditional Cypriot basket">
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <div class="section-header" data-aos="fade-up">
+          <h2>
+            <span class="en">What Our Users Say</span>
+            <span class="el">Τι Λένε οι Χρήστες μας</span>
+          </h2>
+          <div class="underline"></div>
+        </div>
+        <div class="testimonial-slider" data-aos="fade-up">
+	  <div class="carousel-testimonials">
+            <div class="testimonial">
+              <p class="en">"smartKofini has revolutionized the way I shop for produce. I save both time and money!"</p>
+              <p class="el">"Το smartKofini έχει φέρει επανάσταση στον τρόπο που ψωνίζω προϊόντα. Εξοικονομώ χρόνο και χρήματα!"</p>
+              <p class="author">- Savvas C.</p>
+            </div>
+            <div class="testimonial">
+              <p class="en">"smartKofini helps me shop fruits and vegetables at the best quality and price!"</p>
+              <p class="el">"Το smartKofini με βοηθάει να ψωνίζω φρούτα και λαχανικά στην καλύτερη ποιότητα και τιμή!"</p>
+              <p class="author">- Christiana P.</p>
+            </div>
+            <!-- Add more testimonials as needed -->
+          </div>
+	</div>
+      </section>
+
+      <section id="contact">
+	<script type="text/javascript">
+	  var submitted=false;
+	  function disableSubmit() {
+	      var submitButton = document.getElementById('submitButton');
+	      submitButton.disabled = true;
+	      submitButton.innerText = '...';
+	      submitted = true;
+	  }
+	</script>
+
+	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"  onload="if(submitted) {document.getElementById('contact').style.display='none';  document.getElementById('thankYouMessage').style.display='block';}"></iframe>
+
+        <div class="section-header" data-aos="fade-up">
+          <h2>
+            <span class="en">Get in <span class="highlight">Touch</span></span>
+            <span class="el">Επικοινωνήστε <span class="highlight">Μαζί μας</span></span>
+          </h2>
+          <div class="underline"></div>
+        </div>
+	<form data-aos="fade-up" class="contact-form" id="contactForm"
+	      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd8_fzCuPd0F9gn4bk-DIPrkmcd4aQjJIFRq0zTweqGvyePSQ/formResponse" method="POST" target="hidden_iframe"  onsubmit="disableSubmit()">
+          <input type="text" id="name" placeholder="Name / Όνομα" name="entry.1546443415"  pattern="[a-zA-Z\u0370-\u03FF\u1F00-\u1FFF ]+" oninvalid="this.setCustomValidity('Enter a name containing only letters')"  onchange="try{setCustomValidity('')}catch(e){}"  oninput="setCustomValidity(' ')"  required>
+          <input type="email" id="email" placeholder="Email / Ηλ. Ταχυδρομείο" name="entry.134040132" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"  oninvalid="this.setCustomValidity('Enter a valid email address')"  onchange="try{setCustomValidity('')}catch(e){}"  oninput="setCustomValidity(' ')" required>
+          <textarea id="message" placeholder="Message / Μήνυμα" name="entry.188106255" required></textarea>
+          <button type="submit" id="submitButton">
+            <span class="en">Send</span>
+            <span class="el">Αποστολή</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>		
+      </section>
+      <div class="container" id="thankYouMessage">
+	<h3>Thank you!</h3>
+	<p>Your message has been sent.</p>
+      </div>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 smartKofini. <span class="en">All rights reserved.</span><span class="el">Με επιφύλαξη παντός δικαιώματος.</span> | <a href="privacy-policy.html">Privacy Policy</a></p></p>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
+      <div class="footer-content">
+        <p>&copy; 2024 smartKofini. <span class="en">All rights reserved.</span><span class="el">Με επιφύλαξη παντός δικαιώματος.</span> | <a href="privacy-policy.html">Privacy Policy</a></p></p>
+<div class="social-links">
+  <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+  <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+  <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</footer>
 
-    <button id="scroll-to-top" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+<button id="scroll-to-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
 
-    <script>
-        // Initialize AOS
-        AOS.init();
+<script>
+  $(document).ready(function(){
+      $('.carousel').slick({
+	  // Options for the Slick slider
+	  slidesToShow: 1, // Shows one image at a time
+	  slidesToScroll: 1,
+	  autoplay: true, // Set to true to enable autoplay
+	  autoplaySpeed: 3000, // Adjust the autoplay speed (in milliseconds)
+	  dots: true, // Shows navigation dots
+	  arrows: true, // Show navigation arrows
+      });
+      $('.carousel-testimonials').slick({
+	  // Options for the Slick slider
+	  slidesToShow: 1, // Shows one image at a time
+	  slidesToScroll: 1,
+	  autoplay: true, // Set to true to enable autoplay
+	  autoplaySpeed: 3000, // Adjust the autoplay speed (in milliseconds)
+	  dots: true, // Shows navigation dots
+	  arrows: true, // Show navigation arrows
+      });
 
-        // Language switcher
-        function switchLanguage(lang) {
-            document.body.className = lang;
-            localStorage.setItem('language', lang);
-        }
+      // Initialize AOS
+      AOS.init();
+      
+  });
+  
+  // Language switcher
+  function switchLanguage(lang) {
+      document.body.className = lang;
+      localStorage.setItem('language', lang);
+  }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('language') || 'en';
-            switchLanguage(savedLang);
+  document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('language') || 'en';
+      switchLanguage(savedLang);
 
-            // Remove loading overlay
-            const loadingOverlay = document.getElementById('loading-overlay');
-            loadingOverlay.style.opacity = '0';
-            setTimeout(() => {
-                loadingOverlay.style.display = 'none';
-            }, 500);
-        });
+      // Remove loading overlay
+      const loadingOverlay = document.getElementById('loading-overlay');
+      loadingOverlay.style.opacity = '0';
+      setTimeout(() => {
+          loadingOverlay.style.display = 'none';
+      }, 500);
+  });
 
-        // Scroll to top functionality
-        const scrollToTopButton = document.getElementById('scroll-to-top');
+  // Scroll to top functionality
+  const scrollToTopButton = document.getElementById('scroll-to-top');
 
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 100) {
-                scrollToTopButton.classList.add('show');
-            } else {
-                scrollToTopButton.classList.remove('show');
-            }
-        });
+  window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+          scrollToTopButton.classList.add('show');
+      } else {
+          scrollToTopButton.classList.remove('show');
+      }
+  });
 
-        scrollToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+  scrollToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
 
-        // Mobile menu toggle
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const navMenu = document.querySelector('nav ul');
+  // Mobile menu toggle
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const navItems = document.querySelector('.nav-items'); // Target the .nav-items element
 
-        mobileMenuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('open');
-            mobileMenuToggle.classList.toggle('open');
-        });
+  mobileMenuToggle.addEventListener('click', () => {
+      navItems.classList.toggle('open'); // Toggle the 'open' class on .nav-items
+      mobileMenuToggle.classList.toggle('open');
+  });
+  
+  // Dark mode toggle
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+  });
+  
+  // Check for saved dark mode preference
+  if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+  }
+</script>
 
-        // Dark mode toggle
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-        });
-
-        // Check for saved dark mode preference
-        if (localStorage.getItem('darkMode') === 'true') {
-            document.body.classList.add('dark-mode');
-        }
-    </script>
 </body>
 </html>
