@@ -181,6 +181,7 @@
 	<form data-aos="fade-up" class="contact-form" id="contactForm"
 	      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd8_fzCuPd0F9gn4bk-DIPrkmcd4aQjJIFRq0zTweqGvyePSQ/formResponse" method="POST" target="hidden_iframe"  onsubmit="disableSubmit()">
           <input type="text" id="name" placeholder="Name / Όνομα" name="entry.1546443415"  pattern="[a-zA-Z\u0370-\u03FF\u1F00-\u1FFF ]+" oninvalid="this.setCustomValidity('Enter a name containing only letters')"  onchange="try{setCustomValidity('')}catch(e){}"  oninput="setCustomValidity(' ')"  required>
+	  <div style="display:none;" >  <input type="text" id="address" placeholder="Address / Διεύθυνση" name="entry.200820691" value=" " required>  </div>
           <input type="email" id="email" placeholder="Email / Ηλ. Ταχυδρομείο" name="entry.134040132" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"  oninvalid="this.setCustomValidity('Enter a valid email address')"  onchange="try{setCustomValidity('')}catch(e){}"  oninput="setCustomValidity(' ')" required>
           <textarea id="message" placeholder="Message / Μήνυμα" name="entry.188106255" required></textarea>
           <button type="submit" id="submitButton">
