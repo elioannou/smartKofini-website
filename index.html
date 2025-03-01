@@ -167,6 +167,33 @@
 	      submitButton.innerText = '...';
 	      submitted = true;
 	  }
+              let formLoadTime;
+
+        // Record the time when the page loads
+        window.onload = function () {
+            formLoadTime = new Date().getTime();
+        };
+        
+        function validateForm(event) {
+            let submitTime = new Date().getTime();
+            let timeDifference = submitTime - formLoadTime;
+            
+            // Set a minimum time threshold (e.g., 5 seconds)
+            if (timeDifference < 50000) {
+                alert("Form submitted too quickly! Please take your time.");
+                event.preventDefault(); // Prevent form submission
+                return false;
+            }
+            return true;
+        }
+
+        function handleFormSubmit(event) {
+            if (!validateForm(event)) {
+                return false; // Prevent submission if validation fails
+            }
+            disableSubmit(); // Call disableSubmit() if validation passes
+            return true;
+        }
 	</script>
 
 	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"  onload="if(submitted) {document.getElementById('contact').style.display='none';  document.getElementById('thankYouMessage').style.display='block';}"></iframe>
@@ -178,10 +205,8 @@
           </h2>
           <div class="underline"></div>
         </div>
-	<form data-aos="fade-up" class="contact-form" id="contactForm"
-	      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd8_fzCuPd0F9gn4bk-DIPrkmcd4aQjJIFRq0zTweqGvyePSQ/formResponse" method="POST" target="hidden_iframe"  onsubmit="disableSubmit()">
+	<form data-aos="fade-up" class="contact-form" id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd8_fzCuPd0F9gn4bk-DIPrkmcd4aQjJIFRq0zTweqGvyePSQ/formResponse" method="POST" target="hidden_iframe"  onsubmit="return handleFormSubmit(event)">
           <input type="text" id="name" placeholder="Name / Όνομα" name="entry.1546443415"  pattern="[a-zA-Z\u0370-\u03FF\u1F00-\u1FFF ]+" oninvalid="this.setCustomValidity('Enter a name containing only letters')"  onchange="try{setCustomValidity('')}catch(e){}"  oninput="setCustomValidity(' ')"  required>
-	  <div style="display:none;" >  <input type="text" id="address" placeholder="Address / Διεύθυνση" name="entry.200820691" value=" " required>  </div>
           <input type="email" id="email" placeholder="Email / Ηλ. Ταχυδρομείο" name="entry.134040132" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"  oninvalid="this.setCustomValidity('Enter a valid email address')"  onchange="try{setCustomValidity('')}catch(e){}"  oninput="setCustomValidity(' ')" required>
           <textarea id="message" placeholder="Message / Μήνυμα" name="entry.188106255" required></textarea>
           <button type="submit" id="submitButton">
