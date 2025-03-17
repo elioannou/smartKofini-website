@@ -178,8 +178,8 @@
             let submitTime = new Date().getTime();
             let timeDifference = submitTime - formLoadTime;
             
-            // Set a minimum time threshold (e.g., 10 seconds)
-            if (timeDifference < 10000) {
+            // Set a minimum time threshold (e.g., 5 seconds)
+            if (timeDifference < 5000) {
                 alert("Form submitted too quickly! Please take your time.");
                 event.preventDefault(); // Prevent form submission
                 return false;
